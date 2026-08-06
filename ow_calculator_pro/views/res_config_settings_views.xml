@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_calculator" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.calculator.pro</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Calculator" string="Calculator" name="ow_calculator_pro"
+                     groups="base.group_system">
+                    <block title="Calculator Pro" name="calculator_pro_settings">
+                        <setting id="calculator_history_enabled_setting"
+                                 string="Save Calculation History"
+                                 help="Automatically save every calculation to the history log">
+                            <field name="calculator_history_enabled"/>
+                        </setting>
+                        <setting id="calculator_decimal_precision_setting"
+                                 string="Calculator Decimal Precision"
+                                 help="Number of decimal places shown in results">
+                            <field name="calculator_decimal_precision"/>
+                        </setting>
+                        <setting id="calculator_default_theme_setting"
+                                 string="Default Theme"
+                                 help="Default appearance for new users">
+                            <field name="calculator_default_theme"/>
+                        </setting>
+                        <setting id="calculator_history_retention_days_setting"
+                                 string="History Retention (days)"
+                                 help="Automatically delete history older than this many days (0 = keep forever)">
+                            <field name="calculator_history_retention_days"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
