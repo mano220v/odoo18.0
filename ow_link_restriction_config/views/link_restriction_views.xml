@@ -62,7 +62,7 @@
          MENUS (standalone root, no dependency on core Settings menu IDs)
     ================================================================ -->
     <menuitem id="menu_ow_tools_root"
-              name="Ow Tools"
+              name="Interlink Restrict"
               sequence="95"
               groups="base.group_system"/>
 
