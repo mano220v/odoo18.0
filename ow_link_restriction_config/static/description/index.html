@@ -1,0 +1,160 @@
+<section class="ow_lr_desc">
+<style>
+.ow_lr_desc {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #3a3040;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.ow_lr_desc * { box-sizing: border-box; }
+.ow_lr_banner { width: 100%; height: auto; display: block; border-radius: 6px; margin-bottom: 32px; }
+.ow_lr_desc h2 { font-size: 26px; font-weight: 700; color: #4b3355; margin: 0 0 14px; }
+.ow_lr_desc h3 { font-size: 17px; font-weight: 700; color: #4b3355; margin: 0 0 8px; }
+.ow_lr_desc p { font-size: 15px; line-height: 1.65; color: #574d5e; margin: 0 0 14px; }
+.ow_lr_slogan { text-align: center; margin: 0 0 40px; }
+.ow_lr_slogan h1 { font-size: 27px; font-weight: 700; color: #4b3355; margin: 0 0 10px; }
+.ow_lr_slogan p { font-size: 16px; color: #7a6d82; max-width: 720px; margin: 0 auto; }
+.ow_lr_row { margin: 0 -12px 40px; overflow: hidden; }
+.ow_lr_col { float: left; width: 33.333%; padding: 0 12px; margin-bottom: 24px; }
+.ow_lr_card {
+    background: #faf8fb; border: 1px solid #e7e0ea; border-radius: 10px;
+    padding: 22px 20px; min-height: 190px;
+}
+.ow_lr_badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, #83557c, #4b3355);
+    color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 12px;
+}
+.ow_lr_badge.warn { background: linear-gradient(135deg, #c0392b, #922b21); }
+.ow_lr_divider { border: none; border-top: 1px solid #e7e0ea; margin: 40px 0; }
+.ow_lr_steps { counter-reset: ow-step; list-style: none; padding: 0; margin: 0; }
+.ow_lr_steps li {
+    position: relative; padding: 4px 0 20px 46px; font-size: 15px; line-height: 1.6; color: #574d5e;
+}
+.ow_lr_steps li:before {
+    counter-increment: ow-step; content: counter(ow-step);
+    position: absolute; left: 0; top: 2px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: #4b3355; color: #fff; font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+}
+.ow_lr_steps li strong { color: #3a3040; }
+.ow_lr_matrix { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0 0 8px; }
+.ow_lr_matrix th, .ow_lr_matrix td { border: 1px solid #e7e0ea; padding: 10px 14px; text-align: left; }
+.ow_lr_matrix th { background: #4b3355; color: #fff; font-weight: 600; }
+.ow_lr_matrix td.yes { color: #922b21; font-weight: 700; }
+.ow_lr_matrix td.no { color: #2e7d32; font-weight: 700; }
+.ow_lr_note {
+    background: #fdf3f1; border: 1px solid #eecdc6; border-left: 4px solid #c0392b;
+    border-radius: 6px; padding: 18px 20px; margin-bottom: 16px;
+}
+.ow_lr_note h3 { color: #922b21; }
+.ow_lr_note ul { margin: 0; padding-left: 20px; }
+.ow_lr_note li { font-size: 14.5px; line-height: 1.6; color: #5a3f3c; margin-bottom: 6px; }
+.ow_lr_tech { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.ow_lr_tech td { padding: 10px 14px; border-bottom: 1px solid #e7e0ea; }
+.ow_lr_tech td:first-child { color: #7a6d82; width: 220px; }
+.ow_lr_tech td:last-child { color: #3a3040; font-weight: 600; }
+.ow_lr_footer { text-align: center; padding: 30px 0 10px; color: #948a9c; font-size: 13.5px; }
+.ow_lr_footer a { color: #4b3355; font-weight: 600; text-decoration: none; }
+</style>
+
+<img class="ow_lr_banner" src="banner.png" alt="Configurable Internal Link Restriction"/>
+
+<div class="ow_lr_slogan">
+    <h1>Stop accidental drill-downs into records people shouldn't casually open</h1>
+    <p>Pick exactly which models lose the Many2one &ldquo;open linked record&rdquo; arrow &mdash;
+       without touching access rights, without writing code, and without affecting Kanban views.</p>
+</div>
+
+<div class="ow_lr_row">
+    <div class="ow_lr_col">
+        <div class="ow_lr_card">
+            <div class="ow_lr_badge">1</div>
+            <h3>Pick models, not fields</h3>
+            <p>Add any model to a simple configuration list. Every Many2one pointing at
+               records of that model has its click-through disabled &mdash; no per-field
+               setup, no view inheritance to maintain.</p>
+        </div>
+    </div>
+    <div class="ow_lr_col">
+        <div class="ow_lr_card">
+            <div class="ow_lr_badge">2</div>
+            <h3>Form &amp; List only</h3>
+            <p>The restriction is scoped to the model being <em>displayed</em> &mdash; its
+               own Form and List views. Kanban views are never touched, whatever you configure.</p>
+        </div>
+    </div>
+    <div class="ow_lr_col">
+        <div class="ow_lr_card">
+            <div class="ow_lr_badge">3</div>
+            <h3>One click to pause</h3>
+            <p>Untick a model's <strong>Active</strong> toggle to lift the restriction
+               instantly, or re-enable it later, without ever deleting the configuration entry.</p>
+        </div>
+    </div>
+</div>
+
+<hr class="ow_lr_divider"/>
+
+<h2>Where the restriction applies</h2>
+<p>The rule is about the view being <em>displayed</em>, not the model the Many2one field points to.
+   If <code>hr.leave</code> is restricted, every Many2one shown on an <code>hr.leave</code> Form or
+   List loses its open-record arrow &mdash; regardless of what it links to.</p>
+<table class="ow_lr_matrix">
+    <tr><th>View type</th><th>Affected by restriction?</th></tr>
+    <tr><td>Form view</td><td class="yes">Restricted when configured</td></tr>
+    <tr><td>List view</td><td class="yes">Restricted when configured</td></tr>
+    <tr><td>Kanban view</td><td class="no">Never restricted</td></tr>
+</table>
+
+<hr class="ow_lr_divider"/>
+
+<h2>Setting it up</h2>
+<ol class="ow_lr_steps">
+    <li><strong>Open the menu.</strong> Go to <em>Ow Tools &rsaquo; Internal Link Restrictions</em>
+        (visible to users in the Settings / Technical Features group).</li>
+    <li><strong>Add a model.</strong> Create a new line and select the model whose Form and
+        List views should lose the Many2one click-through. An optional note field lets you
+        record why.</li>
+    <li><strong>Save, then refresh.</strong> The restricted-model list is pushed into the user
+        session at login / page load, so anyone already connected needs to refresh their
+        browser tab for a change to take effect.</li>
+    <li><strong>Toggle as needed.</strong> Flip a row's Active switch off to pause a restriction,
+        or back on to reinstate it &mdash; the configuration entry itself is never lost.</li>
+</ol>
+
+<hr class="ow_lr_divider"/>
+
+<div class="ow_lr_note">
+    <h3>Good to know before you configure anything</h3>
+    <ul>
+        <li>This is a <strong>client-side UI restriction only</strong>. It does not change
+            <code>ir.model.access.csv</code> rights or <code>ir.rule</code> record rules. A user
+            with read access to a restricted model can still reach its records through search,
+            another menu, or a report. For real data-level security, use record rules.</li>
+        <li>The restricted-model list loads <strong>once per session</strong> (login / page load).
+            After adding, removing, or toggling a model, users must refresh their tab to see the change.</li>
+    </ul>
+</div>
+
+<hr class="ow_lr_divider"/>
+
+<h2>Technical details</h2>
+<table class="ow_lr_tech">
+    <tr><td>Compatible version</td><td>Odoo 18.0</td></tr>
+    <tr><td>Category</td><td>Tools</td></tr>
+    <tr><td>Depends on</td><td>base, web</td></tr>
+    <tr><td>Configuration menu</td><td>Ow Tools &rsaquo; Internal Link Restrictions</td></tr>
+    <tr><td>Required access group</td><td>Settings / Technical Features</td></tr>
+    <tr><td>License</td><td>LGPL-3</td></tr>
+    <tr><td>Author</td><td>Odoo Wings</td></tr>
+</table>
+
+<div class="ow_lr_footer">
+    Questions or a feature request? Reach us at
+    <a href="mailto:vsmanoj144@gmail.com">vsmanoj144@gmail.com</a>
+</div>
+
+</section>
