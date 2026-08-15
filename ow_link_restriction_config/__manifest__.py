@@ -1,5 +1,5 @@
 {
-    'name': 'ow - Configurable Internal Link Restriction',
+    'name': 'Configurable Internal Link Restriction',
     'version': '18.0.1.0.0',
     'summary': 'Pick specific models to disable the Many2one "internal link" '
                'open-record navigation on, for Form and List views only.',
