@@ -5,7 +5,6 @@
         <field name="arch" type="xml">
             <form string="Instant Backup">
                 <group>
-                    <field name="state" invisible="1"/>
                     <field name="database_name" readonly="state == 'done'"/>
                     <field name="backup_format" readonly="state == 'done'"/>
                     <field name="backup_filename" invisible="1"/>
